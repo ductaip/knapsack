@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1em;
+    color: #555;
+}
+
+.second-input {
+    display: block;
+    text-align: right;
+}
+
+input[type="number"] {
+    padding: 8px;
+    margin-top: 5px;
+    width: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.gen-btn {
+    height: 40px;
+    margin-top: 20px;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+    background-color: #c8e6c9;
+    border-color: #4CAF50;
+}
+
+.result {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.test {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#userResult, #optimalResult {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    background:#87ce89;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.text-color {
+    color: #4CAF50;
+}
+ 
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}

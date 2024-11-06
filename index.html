@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapsack Game</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+<body>
+
+    <h2>Knapsack Game</h2>
+    <p>Enter product quantity and maximum weight of bag:</p>
+
+    <div class="form">
+        <div>
+            <label>Number of Products: 
+                <input type="number" id="productCount" min="1" required>
+            </label> <br/>
+            <label class="second-input">Maximum Weight: 
+                <input type="number" id="maxWeight" min="1" required>
+            </label>
+        </div>
+
+        <button class="gen-btn" onclick="generateProducts()">Generate Products</button>
+        <div class="info">Current Weight: 0<br/>Current Value: 0</div>
+
+    </div>
+ 
+
+    <div id="products"></div>
+    <button onclick="submitSelection()">Submit Selection</button>
+
+    <div id="userResult" class="result"></div>
+    <div id="optimalResult" class="result"></div>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
