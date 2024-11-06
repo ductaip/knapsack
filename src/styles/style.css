@@ -147,3 +147,7 @@ button:hover {
 .red {
     color: red;
 }
+
+.highlight {
+    border: 3px solid red;
+}

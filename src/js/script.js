@@ -17,7 +17,7 @@ function generateProducts() {
         products.push({ weight, value, index: i + 1 });
         const productDiv = document.createElement('div');
         productDiv.classList.add('product');
-        productDiv.innerText = `Product ${i + 1}\nWeight: ${weight}\nValue: ${value}`;
+        productDiv.innerText = `Weight: ${weight}\nValue: ${value}`;
         productDiv.onclick = () => toggleSelect(i, productDiv);
         document.getElementById('products').appendChild(productDiv);
     }
@@ -25,6 +25,7 @@ function generateProducts() {
 
 
 function toggleSelect(index, element) {
+    document.querySelectorAll('.product').forEach(value => value.classList.remove('highlight'))
     const currentWeight = selectedProducts.reduce((sum, idx) => sum + products[idx].weight, 0);
 
     const newWeight = currentWeight + products[index].weight;
@@ -95,11 +96,24 @@ function submitSelection() {
         }
     }
     ans.reverse();
-    const text = ans.map((value, index) => `Product ${value.index} : value = ${value.value} weight = ${value.weight}`).join('\n');
+    const text = ans.map((value, index) => `Value = ${value.value} Weight = ${value.weight}`).join('\n');
 
     const div = document.createElement('div');
     div.innerText = text;
     optimalResult.appendChild(div);
+
+    console.log(ans); 
+    console.log('@@')
+    const test = document.querySelectorAll('.product');
+    test.forEach((value, index) => {
+        for(let i = 0; i < ans.length; i++) {
+            if(ans[i].index == index + 1) {
+                value.classList.add('highlight')
+                console.log(value)
+            }
+        }
+    })
+
 }
 
  
