@@ -129,7 +129,7 @@ button:hover {
 .info {
     position: absolute;
     left: 100px;
-    top: 0;
+    top: -100px;
     background:#87ce89;
     color: #ffffff;
     padding: 15px 20px;
